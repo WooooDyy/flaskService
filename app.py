@@ -11,19 +11,21 @@ def hello_Wind():
 
 # 获取列表的。一天执行一次
 # 格式 2019-01-20
-@app.route('/getList/<string:date>', methods=['GET'])
-def getList(date):
+@app.route('/getListMock/<string:date>', methods=['GET'])
+def getListMock(date):
     print(request.url)  # 请求的http网址
     # date = request.args.to_dict()  # 解析http中的参数
     # TODO 返回期权列表，一天执行一次
+    # Mock 仅仅用来测试连通性，原来的数据组织跟现在的数据组织是不一样的，所以返回一个date测试连通性即可，之后的测试要一起来。
 
 
 
-    return str(date)  # 注意，不管什么问题，一定要返回，就算是返回None
+
+    return str(date)
 
 
 @app.route('/getOptions', methods=['GET'])
-def getOptions():
+def getOptionsMock():
     # TODO 返回期权的属性
 
 
